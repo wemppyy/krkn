@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Ruda:wght@400..900&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  font-family: "Ruda";
+}
+
+.center-m {
+  margin: auto;
+}
+
+.wrapper {
+  padding-top: 100px;
+  background: #101010;
+  height: 100vh;
+  color: #ebebeb;
+}
+
+.anim-up {
+  animation: page-open-up 3s ease;
+}
+
+.anim-down {
+  animation: page-open-down 3s ease;
+}
+
+@keyframes page-open-up {
+  0%,
+  15% {
+    opacity: 0;
+    transform: translateY(-5vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes page-open-down {
+  0%,
+  15% {
+    opacity: 0;
+    transform: translateY(5vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo {
+  width: 50vh;
+  text-align: center;
+  position: relative;
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  filter: blur(100px);
+  transition: 0.3s all;
+}
+
+.logo:hover::before {
+  background-color: rgba(255, 255, 255, 0.085);
+}
+
+.logo svg {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.logo p {
+  font-weight: 700;
+  letter-spacing: 1.5rem;
+  font-size: 130px;
+  text-transform: uppercase;
+}
+
+.btns {
+  margin-top: 125px;
+  gap: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns a {
+  font-weight: 700;
+  font-size: 18px;
+  padding: 20px;
+  background-color: #202020;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+}
+
+.btns a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 75px 0 rgba(255, 255, 255, 0.05);
+}
+
+.creator {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0.1;
+  font-size: 16px;
+  letter-spacing: 0.2rem;
+}
